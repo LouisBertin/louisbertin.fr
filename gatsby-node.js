@@ -111,7 +111,6 @@ exports.onCreateNode = ({ node, actions, getNodes }) => {
       const { fields: { page: { path: pagePath, lang } } } = node
   
       if (defaultLanguage === lang) {
-        console.log(pagePath, relativePath)
         createPage({
           path: pagePath,
           component: PAGE_TEMPLATE,
