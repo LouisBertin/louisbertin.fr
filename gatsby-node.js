@@ -1,6 +1,8 @@
 const fs = require('fs')
 const path = require("path")
 const grayMatter = require('gray-matter')
+var showdown  = require('showdown')
+converter = new showdown.Converter()
 
 const PATH_TO_MD_PAGES = path.resolve('src/markdown')
 const { siteMetadata: { defaultLanguage } } = require('./gatsby-config')
@@ -40,8 +42,8 @@ exports.onCreateNode = ({ node, actions, getNodes }) => {
       const { pageType, pageId, lang } = _getMarkdownNodeIdAndLanguage(node)
   
       // these values are extracted from within the markdown
-      const { data: { title, date, draft }, content: body } = _loadMarkdownFile(node)
-  
+      const { data: { title, date }, content: body } = _loadMarkdownFile(node)
+        
       const pageData = {
         pageId,
         type: pageType,
@@ -65,7 +67,7 @@ exports.onCreateNode = ({ node, actions, getNodes }) => {
                 lang: r.lang,
                 title: gm.data.title,
                 date: gm.data.date,
-                markdown: gm.content,
+                markdown: converter.makeHtml(gm.content),
               })
             }
           }

@@ -1,40 +1,57 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { IntlContextConsumer } from "gatsby-plugin-intl"
+import Layout from "../components/layout"
+import { getDataFromLanguage } from "../utils/helper"
+
+const Page = ({ currentLanguage, page }) => {
+  const data = getDataFromLanguage(currentLanguage, page.versions)
+
+  return (
+    <div>
+      <h2>{data.title}</h2>
+      <div
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: data.markdown }}
+        />
+    </div>
+  )
+}
 
 export default function Template({ data }) {
   return (
-    <IntlContextConsumer>
-      {({ language: currentLanguage }) => (
-        <div>
-          {console.log(currentLanguage)}
-          {console.log(data.current.fields.page)}
-        </div>
-      )}
-    </IntlContextConsumer>
+    <Layout>
+      <IntlContextConsumer>
+        {({ language: currentLanguage }) => (
+          <Page
+            currentLanguage={currentLanguage}
+            page={data.current.fields.page}
+        ></Page>
+        )}
+      </IntlContextConsumer>
+    </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  fragment FileFields on File {
-    fields {
-      page {
-        path
-        type
+fragment FileFields on File {
+  fields {
+    page {
+      path
+      type
+      lang
+      versions {
         lang
-        versions {
-          lang
-          date
-          title
-          markdown
-        }
+        date
+        title
+        markdown
       }
     }
   }
-
-  query($relativePath: String!) {
-    current: file( relativePath: {  eq: $relativePath } ) {
-      ...FileFields
-    }
+}
+query($relativePath: String!) {
+  current: file( relativePath: {  eq: $relativePath } ) {
+    ...FileFields
   }
+}
 `
