@@ -32,7 +32,7 @@ export default injectIntl(IndexPage)
 
 export const pageQuery = graphql`
 query ($locale: String) {
-  posts: allMarkdownRemark(filter: {frontmatter: {language: {eq: $locale}}}) {
+  posts: allMarkdownRemark(filter: {frontmatter: {language: {eq: $locale}}}, sort: {fields: [frontmatter___date] order: DESC}) {
     nodes {
       id
       frontmatter {
