@@ -1,13 +1,10 @@
 {
-  "title": "Gatsby Français",
   "description": "Starten Sie Ihr nächstes, tolles Gatsby-Projekt mit diesem default-starter-intl. Dieser Barebones-Starter wird mit den wichtigsten Gatsby-Konfigurationsdateien geliefert, die Sie möglicherweise benötigen.",
   "author": "Louis Bertin",
   "hello": "Salut!",
   "welcome": "Bienvenue sur mon nouveau site Gatsby",
   "title_page2": "Deuxième page",
   "hello_page2": "Salut depuis la deuxième page",
-  "go_page2": "Aller à la deuxième page",
-  "build": "Quelque chose de vraiment cool va bientôt arriver ici, STAY TUNED!",
   "welcome_page2": "Salut depuis la deuxième page",
   "go_back": "Retourner à l'accueil",
   "notfound": {

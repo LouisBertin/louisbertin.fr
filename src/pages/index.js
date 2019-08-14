@@ -1,15 +1,18 @@
 import React from "react"
-import { FormattedMessage, Link, injectIntl } from "gatsby-plugin-intl"
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import { graphql } from "gatsby"
 
-const IndexPage = ({ intl }) => {
+import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import PostList from "../components/postsList"
+
+const IndexPage = ({ intl, data }) => {
+
   return (
     <Layout>
       <SEO
         lang={intl.locale}
-        title={intl.formatMessage({ id: "title" })}
+        title={data.site.siteMetadata.title}
         keywords={[`gatsby`, `application`, `react`]}
       />
       <h1>
@@ -18,17 +21,32 @@ const IndexPage = ({ intl }) => {
       <p>
         <FormattedMessage id="welcome" />
       </p>
-      <p>
-        <FormattedMessage id="build" />
-      </p>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
-      <Link to="/page-2/">
-        <FormattedMessage id="go_page2" />
-      </Link>
+
+      <h2>Posts</h2>
+      <PostList posts={data.posts}></PostList>
     </Layout>
   )
 }
 
 export default injectIntl(IndexPage)
+
+export const pageQuery = graphql`
+query ($locale: String) {
+  posts: allMarkdownRemark(filter: {frontmatter: {language: {eq: $locale}}}) {
+    nodes {
+      id
+      frontmatter {
+        title
+        language
+        date(formatString: "MMMM Do, YYYY", locale: $locale)
+        path
+      }
+    }
+  }
+  site: site {
+    siteMetadata {
+      title
+    }
+  }
+}
+`

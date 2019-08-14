@@ -125,4 +125,17 @@ exports.onCreateNode = ({ node, actions, getNodes }) => {
     })
   }
 
-  
+  // override default page context
+  exports.onCreatePage = ({ page, actions }) => {
+    const { createPage, deletePage } = actions
+    deletePage(page)
+    // You can access the variable "house" in your page queries now
+
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+        locale: page.context.intl.language,
+      },
+    })
+  }

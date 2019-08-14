@@ -1,5 +1,5 @@
 ---
-path: blog/how-to-clean-and-improve-osx-terminal-speed/en.md
+path: /fr/how-to-clean-and-improve-osx-terminal-speed
 language: fr
 title: Comment nettoyer et améliorer la vitesse de votre terminal sur OSX
 date: 2019-08-06T16:04:03.242Z

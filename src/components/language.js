@@ -12,7 +12,7 @@ const Language = () => {
       <IntlContextConsumer>
         {({ languages, language: currentLocale }) =>
           languages.map(language => (
-            <a
+            <button
               key={language}
               onClick={() => changeLocale(language)}
               style={{
@@ -20,10 +20,13 @@ const Language = () => {
                 margin: 10,
                 textDecoration: `underline`,
                 cursor: `pointer`,
+                background: 'transparent',
+                border: 'none',
+                outline: 'none'
               }}
             >
               {languageName[language]}
-            </a>
+            </button>
           ))
         }
       </IntlContextConsumer>

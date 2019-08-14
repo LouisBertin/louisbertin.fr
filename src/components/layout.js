@@ -26,7 +26,7 @@ const Layout = ({ children, intl }) => {
 
   return (
     <>
-      <Header siteTitle={intl.formatMessage({ id: "title" })} />
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
           margin: `0 auto`,

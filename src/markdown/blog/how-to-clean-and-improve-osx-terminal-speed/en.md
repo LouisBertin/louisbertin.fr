@@ -1,5 +1,5 @@
 ---
-path: /how-to-clean-and-improve-osx-terminal-speed/en.md
+path: /en/how-to-clean-and-improve-osx-terminal-speed
 language: en
 title: How to clean and improve OSX Terminal speed
 date: 2019-08-06T15:55:35.455Z
