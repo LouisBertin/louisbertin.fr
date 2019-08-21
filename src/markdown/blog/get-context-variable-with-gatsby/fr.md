@@ -5,7 +5,7 @@ title: Récupérer les variables du context des pages dans GatsbyJS
 date: 2019-08-14T18:12:00
 ---
 Aujourd'hui je travaillais sur mon site développé avec GatsbyJS (cette techno est plutôt cool, je ferai un article dessus quand j'aurai terminé la v1 de mon blog.)
-Cependant, je voudrais mettre en lumière un problème qui m'est arrivé et qui pourrait aider beaucoup de monde. Effectivement, cette feature est un peu cachée dans la documentation est elle est très utile.
+Cependant, je voudrais mettre en lumière un problème qui m'est arrivé et qui pourrait aider beaucoup de monde. Effectivement, cette feature est un peu cachée dans la documentation et elle est très utile.
 
 J'utilise le plugin `gatsby-plugin-intl` pour avoir un blog en multilangue et il m'arrive souvent de vouloir passer la locale à mes requêtes GraphQL. Ainsi, je dois fournir la locale dans le `context` de chaque page pour construire ma requête ensuite.
 
