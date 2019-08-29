@@ -4,6 +4,8 @@ import { IntlContextConsumer } from "gatsby-plugin-intl"
 import Layout from "../components/layout"
 import { getDataFromLanguage } from "../utils/helper"
 
+import 'highlight.js/styles/monokai-sublime.css'
+
 const Page = ({ currentLanguage, page }) => {
   const data = getDataFromLanguage(currentLanguage, page.versions)
 

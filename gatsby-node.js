@@ -2,7 +2,10 @@ const fs = require('fs')
 const path = require("path")
 const grayMatter = require('gray-matter')
 var showdown  = require('showdown')
-converter = new showdown.Converter()
+showdownHighlight = require("showdown-highlight")
+converter = new showdown.Converter({
+  extensions: [showdownHighlight]
+})
 
 const PATH_TO_MD_PAGES = path.resolve('src/markdown')
 const { siteMetadata: { defaultLanguage } } = require('./gatsby-config')

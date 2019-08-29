@@ -12,7 +12,7 @@ I'm using the plugin `gatsby-plugin-intl` to have a multilingual blog and it oft
 
 At first, I edit `gatsby-node.js` and I'm adding the lines who have to ability to modify the defaults pages behavior :
 
-```
+```js
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
   deletePage(page)
@@ -28,7 +28,7 @@ exports.onCreatePage = ({ page, actions }) => {
 }
 ```
 - Then, I can simply get the value of the `locale` variable in my page request :
-```
+```js
 query ($locale: String) {
   posts: allMarkdownRemark(filter: {frontmatter: {language: {eq: $locale}}}) {
     nodes {

@@ -10,7 +10,7 @@ Cependant, je voudrais mettre en lumière un problème qui m'est arrivé et qui 
 J'utilise le plugin `gatsby-plugin-intl` pour avoir un blog en multilangue et il m'arrive souvent de vouloir passer la locale à mes requêtes GraphQL. Ainsi, je dois fournir la locale dans le `context` de chaque page pour construire ma requête ensuite.
 
 - Premièrement, j'édite le fichier `gatsby-node.js` et j'ajoute les lignes qui vont permettre de modifier les pages par défauts et de leur passer des paramètres :
-```
+```js
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
   deletePage(page)
@@ -26,7 +26,7 @@ exports.onCreatePage = ({ page, actions }) => {
 }
 ```
 - Ensuite, je peux simplement récupérer la valeur de la variable `locale` dans la requête de ma page :
-```
+```js
 query ($locale: String) {
   posts: allMarkdownRemark(filter: {frontmatter: {language: {eq: $locale}}}) {
     nodes {
