@@ -4,18 +4,22 @@ import { IntlContextConsumer } from "gatsby-plugin-intl"
 import Layout from "../components/layout"
 import { getDataFromLanguage } from "../utils/helper"
 
-import 'highlight.js/styles/monokai-sublime.css'
+import "highlight.js/styles/monokai-sublime.css"
 
 const Page = ({ currentLanguage, page }) => {
   const data = getDataFromLanguage(currentLanguage, page.versions)
 
   return (
-    <div>
-      <h2>{data.title}</h2>
+    <div className="blogTemplate">
+      <div className="blog-intro">
+        <h2>{data.title}</h2>
+        {/* TODO: fix date issue */}
+        <p>By Louis Bertin</p>
+      </div>
       <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: data.markdown }}
-        />
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{ __html: data.markdown }}
+      />
     </div>
   )
 }
@@ -28,7 +32,7 @@ export default function Template({ data }) {
           <Page
             currentLanguage={currentLanguage}
             page={data.current.fields.page}
-        ></Page>
+          ></Page>
         )}
       </IntlContextConsumer>
     </Layout>
@@ -36,24 +40,24 @@ export default function Template({ data }) {
 }
 
 export const pageQuery = graphql`
-fragment FileFields on File {
-  fields {
-    page {
-      path
-      type
-      lang
-      versions {
+  fragment FileFields on File {
+    fields {
+      page {
+        path
+        type
         lang
-        date
-        title
-        markdown
+        versions {
+          lang
+          date
+          title
+          markdown
+        }
       }
     }
   }
-}
-query($relativePath: String!) {
-  current: file( relativePath: {  eq: $relativePath } ) {
-    ...FileFields
+  query($relativePath: String!) {
+    current: file(relativePath: { eq: $relativePath }) {
+      ...FileFields
+    }
   }
-}
 `

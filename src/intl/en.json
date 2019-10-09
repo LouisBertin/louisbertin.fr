@@ -1,8 +1,8 @@
 {
   "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
   "author": "Louis Bertin",
-  "hello": "Hi people!",
-  "welcome": "Welcome to my new Gatsby site.",
+  "about": "About me",
+  "home": "Home",
   "title_page2": "Page two",
   "hello_page2": "Hi from the second page",
   "welcome_page2": "Welcome to page 2",
