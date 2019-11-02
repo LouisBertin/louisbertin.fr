@@ -1,14 +1,16 @@
 {
   "description": "Starten Sie Ihr nächstes, tolles Gatsby-Projekt mit diesem default-starter-intl. Dieser Barebones-Starter wird mit den wichtigsten Gatsby-Konfigurationsdateien geliefert, die Sie möglicherweise benötigen.",
   "author": "Louis Bertin",
-  "about": "À propos",
-  "home": "Accueil",
+  "index-about": "À propos",
+  "index-intro": "Passionné depuis l'enfance par la technologie et l'informatique, j'ai découvert le développement informatique grâce à mes études universaitaires. Ma curiosité m'a aidée à développer de nombreuses connaissances dans ce domaine. Vous pouvez trouver l'ensemble de mes connaissances sur la page appropriée.",
+  "index-posts": "Publications",
+  "nav-home": "Accueil",
   "title_page2": "Deuxième page",
   "hello_page2": "Salut depuis la deuxième page",
   "welcome_page2": "Salut depuis la deuxième page",
   "go_back": "Retourner à l'accueil",
   "notfound": {
     "header": "Non trouvé",
-    "description": "Sie haben gerade eine Route erreicht, die nicht existiert... die Traurigkeit."
+    "description": "Vous demandez une page qui n'existe pas... quelle tristesse"
   }
 }

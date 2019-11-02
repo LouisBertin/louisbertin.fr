@@ -9,10 +9,17 @@ const Header = ({ siteTitle }) => (
   <StaticQuery
     query={graphql`
       query {
-        file(relativePath: { eq: "header1.jpg" }) {
+        background: file(relativePath: { eq: "header1.jpg" }) {
           childImageSharp {
             fixed(width: 1920, height: 1080) {
-              ...GatsbyImageSharpFixed
+              src
+            }
+          }
+        }
+        arrow: file(relativePath: { eq: "arrow.png" }) {
+          childImageSharp {
+            fixed(width: 500) {
+              src
             }
           }
         }
@@ -21,7 +28,7 @@ const Header = ({ siteTitle }) => (
     render={data => (
       <header
         style={{
-          backgroundImage: `url(${data.file.childImageSharp.fixed.src})`,
+          backgroundImage: `url(${data.background.childImageSharp.fixed.src})`,
         }}
       >
         <div className="overlay"></div>
@@ -29,7 +36,7 @@ const Header = ({ siteTitle }) => (
           <div>
             <div className="main-nav">
               <Link to="/">
-                <FormattedMessage id="home" />
+                <FormattedMessage id="nav-home" />
               </Link>
             </div>
             <Language />
@@ -39,6 +46,13 @@ const Header = ({ siteTitle }) => (
           <div>
             <h1>{siteTitle}</h1>
             <p>French software engineer</p>
+          </div>
+          <div className="bounce">
+            <img
+              src={data.arrow.childImageSharp.fixed.src}
+              width={30}
+              alt="arrow"
+            />
           </div>
         </div>
       </header>
