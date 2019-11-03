@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { IntlContextConsumer } from "gatsby-plugin-intl"
-import Layout from "../components/layout"
+import LayoutBlog from "../components/layouts/layout-blog"
 import { getDataFromLanguage } from "../utils/helper"
 
 import "highlight.js/styles/monokai-sublime.css"
@@ -26,7 +26,7 @@ const Page = ({ currentLanguage, page }) => {
 
 export default function Template({ data }) {
   return (
-    <Layout>
+    <LayoutBlog>
       <IntlContextConsumer>
         {({ language: currentLanguage }) => (
           <Page
@@ -35,7 +35,7 @@ export default function Template({ data }) {
           ></Page>
         )}
       </IntlContextConsumer>
-    </Layout>
+    </LayoutBlog>
   )
 }
 

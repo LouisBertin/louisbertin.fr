@@ -1,7 +1,7 @@
 import React from "react"
 import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
 
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 import SEO from "../components/seo"
 
 const SecondPage = ({ intl }) => (

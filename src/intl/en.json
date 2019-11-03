@@ -1,10 +1,12 @@
 {
   "description": "Kick off your next, great Gatsby project with this default-starter-intl. This barebones starter ships with the main Gatsby configuration files you might need.",
   "author": "Louis Bertin",
+  "header-intro": "Hi! I'm Louis {emoji}",
   "index-about": "About me",
-  "index-intro": "Passionated about high-tech and computers since my childhood. I've discovered web development five years ago during thanks to my university courses. My curiosity help myself to develop multiples skills in web developement. You can find what I can do on the page about my knowledge.",
+  "index-intro": "Passionate about high-tech and computers since my childhood. I've discovered web development five years ago thanks to my university courses. My curiosity help myself to develop multiple skills in web development. You can find what I can do on the page about my knowledge.",
   "index-posts": "Posts",
   "nav-home": "Home",
+  "btn-dl": "Show my resume",
   "title_page2": "Page two",
   "hello_page2": "Hi from the second page",
   "welcome_page2": "Welcome to page 2",

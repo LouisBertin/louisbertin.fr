@@ -25,6 +25,16 @@ header {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  h1 {
+    color: white;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+  }
+  p,
+  small {
+    color: #bdc3c7;
+  }
   > .overlay {
     position: absolute;
     height: 100%;
@@ -36,7 +46,7 @@ header {
     display: flex;
     justify-content: flex-end;
     z-index: 1;
-    > div {
+    > .navigation {
       display: flex;
       align-items: center;
       .main-nav {
@@ -65,14 +75,15 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    h1 {
-      color: white;
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      color: #bdc3c7;
+  }
+  &.tinyNav {
+    height: auto;
+    nav {
+      justify-content: space-between;
+      h1 {
+        margin: 0;
+        color: white;
+      }
     }
   }
 }

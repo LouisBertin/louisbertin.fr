@@ -2,16 +2,18 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import { FormattedMessage, injectIntl } from "gatsby-plugin-intl"
-import Layout from "../components/layout"
+import Layout from "../components/layouts/layout"
 import SEO from "../components/seo"
 import PostList from "../components/postsList"
+
+import pdf from "../assets/louis_bertin_CV.pdf"
 
 const IndexPage = ({ intl, data }) => {
   return (
     <Layout>
       <SEO
         lang={intl.locale}
-        title={data.site.siteMetadata.title}
+        title="Home"
         keywords={[`gatsby`, `application`, `react`]}
       />
 
@@ -23,6 +25,11 @@ const IndexPage = ({ intl, data }) => {
           <p>
             <FormattedMessage id="index-intro" />
           </p>
+          <div className="btn-download">
+            <a href={pdf}>
+              <FormattedMessage id="btn-dl" />
+            </a>
+          </div>
         </div>
       </div>
 

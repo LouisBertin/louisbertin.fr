@@ -7,28 +7,17 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { injectIntl } from "gatsby-plugin-intl"
 
 import { EntypoFacebook, EntypoGithub } from "react-entypo"
 
 import Header from "./header"
-import "../assets/scss/layout.scss"
+import "../../assets/scss/layout.scss"
 
 const Layout = ({ children, intl }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header />
       <div
         style={{
           margin: `0 auto`,
