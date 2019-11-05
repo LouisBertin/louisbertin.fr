@@ -7,9 +7,8 @@
   "index-posts": "Posts",
   "nav-home": "Home",
   "btn-dl": "Show my resume",
-  "title_page2": "Page two",
-  "hello_page2": "Hi from the second page",
-  "welcome_page2": "Welcome to page 2",
+  "tools-title": "Tools",
+  "tools-intro": "My everyday tools, all the things I need",
   "go_back": "Go back to the homepage",
   "notfound": {
     "header": "NOT FOUND",

@@ -25,8 +25,11 @@ class HeaderComponent extends React.Component {
             </div>
             <div className="navigation">
               <div className="main-nav">
-                <Link to="/">
+                <Link to="/" activeClassName="active">
                   <FormattedMessage id="nav-home" />
+                </Link>
+                <Link to="/tools" activeClassName="active">
+                  Tools
                 </Link>
               </div>
               <Language />
@@ -46,8 +49,11 @@ class HeaderComponent extends React.Component {
         <nav>
           <div className="navigation">
             <div className="main-nav">
-              <Link to="/">
+              <Link to="/" activeClassName="active">
                 <FormattedMessage id="nav-home" />
+              </Link>
+              <Link to="/tools" activeClassName="active">
+                Tools
               </Link>
             </div>
             <Language />

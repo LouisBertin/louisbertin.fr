@@ -39,7 +39,7 @@ header {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
   }
   nav {
     padding: 1.45rem 1.0875rem;
@@ -57,6 +57,9 @@ header {
           text-decoration: none;
           text-transform: uppercase;
           &:hover {
+            color: $blog_green;
+          }
+          &.active {
             color: $blog_green;
           }
         }
@@ -92,6 +95,10 @@ main {
   h2 {
     font-weight: 400;
   }
+  .container {
+    margin: 3em auto;
+    max-width: 960px;
+  }
 
   .about {
     background: #eeeeee;
@@ -109,7 +116,6 @@ main {
       max-width: 960px;
     }
   }
-
   .posts {
     margin: 0;
     > li {
@@ -120,6 +126,11 @@ main {
       a {
         color: #1abc9c;
       }
+    }
+  }
+  .tools {
+    li {
+      margin: 0;
     }
   }
 }
