@@ -39,14 +39,26 @@ const Layout = ({ children, intl }) => {
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </div>
           <div>
-            <ul>
+            <ul className="social-links">
               <li>
                 <a
                   href="https://github.com/LouisBertin"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <EntypoGithub />
+                  <EntypoGithub
+                    style={{ color: "black", height: 20, width: 20 }}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://dev.to/louisbertin">
+                  <img
+                    src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+                    alt="Louis Bertin's DEV Profile"
+                    height="21"
+                    width="21"
+                  ></img>
                 </a>
               </li>
               <li>
@@ -55,7 +67,9 @@ const Layout = ({ children, intl }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <EntypoFacebook style={{ color: "#3b5998" }} />
+                  <EntypoFacebook
+                    style={{ color: "#3b5998", height: 20, width: 20 }}
+                  />
                 </a>
               </li>
               <li>

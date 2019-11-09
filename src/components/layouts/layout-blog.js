@@ -39,7 +39,7 @@ const LayoutBlog = ({ children, intl }) => {
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </div>
           <div>
-            <ul>
+            <ul className="social-links">
               <li>
                 <a
                   href="https://github.com/LouisBertin"

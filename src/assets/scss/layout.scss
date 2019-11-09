@@ -138,12 +138,20 @@ main {
 footer {
   padding: 1em 0;
   text-align: center;
-  ul {
+  ul.social-links {
+    display: inline-flex;
     list-style-type: none;
+    align-items: center;
     margin: 0;
     li {
       display: inline-block;
       margin: 0 0.3em;
+      a {
+        display: flex;
+        img {
+          display: block;
+        }
+      }
     }
   }
 }
