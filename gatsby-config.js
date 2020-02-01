@@ -4,7 +4,8 @@ const defaultLanguage = "en"
 module.exports = {
   siteMetadata: {
     title: `Louis Bertin`,
-    description: `French fullstack web engineer`,
+    defaultTitle: 'Louis Bertin | Software Engineer, Freelancer, Writer',
+    description: `French software engineer, freelancer, writer. Passionate about computer science since his childhood`,
     author: `Louis Bertin`,
     defaultLanguage,
     supportedLanguages,

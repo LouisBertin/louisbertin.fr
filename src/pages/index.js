@@ -13,7 +13,6 @@ const IndexPage = ({ intl, data }) => {
     <Layout>
       <SEO
         lang={intl.locale}
-        title="Home"
         keywords={[`gatsby`, `application`, `react`]}
       />
 
