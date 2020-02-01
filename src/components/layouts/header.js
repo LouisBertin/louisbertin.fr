@@ -21,7 +21,7 @@ class HeaderComponent extends React.Component {
           <nav>
             <div>
               <h1 style={{ display: "block" }}>Louis Bertin</h1>
-              <small>French FullStack Engineer</small>
+              <small>French Software Engineer</small>
             </div>
             <div className="navigation">
               <div className="main-nav">
@@ -69,7 +69,7 @@ class HeaderComponent extends React.Component {
                 }}
               />
             </h1>
-            <p>French FullStack Engineer</p>
+            <p>French Software Engineer</p>
           </div>
           <div className="bounce">
             <img
