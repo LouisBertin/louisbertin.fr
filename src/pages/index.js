@@ -62,10 +62,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    site: site {
-      siteMetadata {
-        title
-      }
-    }
   }
 `
